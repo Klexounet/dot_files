@@ -1,0 +1,1 @@
+alias pcat="pygmentize -g"
