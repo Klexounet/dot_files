@@ -47,8 +47,7 @@ set softtabstop=4
 set shiftwidth=4 " indent also with 4 spaces
 filetype indent on
 
-" wrap lines at 120 chars. 80 is somewhat antiquated with nowadays displays.
-"set textwidth=120
+" indicator at 120 chars
 set colorcolumn=120
 " turn syntax highlighting on
 set t_Co=256
@@ -59,10 +58,25 @@ set number
 set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
- 
 " Highlight search pattern where found
 set hlsearch
 " Start searching on the first key stroke
 set incsearch
-
+" colorscheme
 colorscheme molokai
+
+" Don’t show the intro message when starting Vim
+set shortmess=atI
+" Show the current mode
+set showmode
+" Show the filename in the window titlebar
+set title
+" Show the (partial) command as it’s being typed
+set showcmd
+" Use relative line numbers
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
