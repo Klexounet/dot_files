@@ -92,6 +92,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PYTHONPATH="${PYTHONPATH}:/disk1/alexandre/"
+export PYTHONPATH="${PYTHONPATH}:/disk1/alexandre/:/disk1/alexandre/live"
+
 
 
