@@ -80,3 +80,9 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+
+" Templates
+augroup templates
+    autocmd!
+    autocmd BufNewFile *.py 0r ~/.vim/templates/skeleton.py
+augroup END
