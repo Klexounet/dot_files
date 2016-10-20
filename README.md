@@ -1,5 +1,6 @@
 # Config perso
 
+Vim and tmux config and plugins
 ```
 git clone https://github.com/Klexounet/config_klex.git
 cd config_klex
