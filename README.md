@@ -15,3 +15,4 @@ cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 ## Articles
 
 Vim : https://github.com/doomzhou/vlb/blob/master/Practical-Vim-Edit-Text-at-the-Speed-of-Thought.pdf
+Deep learning : https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap
