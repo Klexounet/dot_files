@@ -12,3 +12,6 @@ cd ycm_build
 sudo apt-get install cmake
 cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
 ```
+## Articles
+
+Vim : https://github.com/doomzhou/vlb/blob/master/Practical-Vim-Edit-Text-at-the-Speed-of-Thought.pdf
