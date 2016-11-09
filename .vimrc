@@ -81,6 +81,9 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+" Remove useless spaces at the end of the line
+autocmd BufWritePre * %s/\s\+$//e
+
 " Templates
 augroup templates
     autocmd!
