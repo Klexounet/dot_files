@@ -10,7 +10,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias ll='ls -alF'
+alias ll='ls -ahlF'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -18,3 +18,9 @@ alias tmux='tmux -2'
 
 alias pcat='pygmentize -g'
 
+alias ga='git add'
+alias gc='git commit'
+alias gd='git diff'
+alias gs='git status'
+
+alias mdpklex='keepassx Dropbox/Reminiz\ -\ Team/Pwds/mdp_klex.kdb'

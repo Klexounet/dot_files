@@ -28,6 +28,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" YouCompleteMe config
+let g:ycm_complete_in_comments = 1
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
 " set UTF-8 encoding
 " reminiz => rc19
@@ -56,14 +60,24 @@ syntax on
 set number
 " highlight matching braces
 set showmatch
+" highlight current line
+set cursorline
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 " Highlight search pattern where found
 set hlsearch
 " Start searching on the first key stroke
 set incsearch
+"
 " colorscheme
 colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
+syntax enable
+
+" Enable italics
+set t_ZH=^[[3m
+set t_ZR=^[[23m
 
 " Don’t show the intro message when starting Vim
 set shortmess=atI
@@ -80,6 +94,10 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+
+" Status line
+set statusline=%f
+set laststatus=2
 
 " Remove useless spaces at the end of the line
 autocmd BufWritePre * %s/\s\+$//e
