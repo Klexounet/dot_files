@@ -10,6 +10,7 @@ import sys
 import time
 from tqdm import tqdm
 
+
 def parse_args():
     """ Parse input arguments """
     parser = argparse.ArgumentParser(description="")
@@ -19,11 +20,11 @@ def parse_args():
     args = parser.parse_args()
     return args
 
+
 def main():
 
     return
 
 if __name__ == '__main__':
     args = parse_args()
-
     main()
