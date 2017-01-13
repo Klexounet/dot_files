@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/disk1/alexandre/live/visualisator'
-let g:netrw_dirhist_2='/disk1/alexandre/DeepZoom/openseadragon/images'
-let g:netrw_dirhist_3='/disk1/alexandre/live/visualisator'
-let g:netrw_dirhist_4='/disk2/recordings_tnt/dataset_live/Prime_time_8_20_00_01_02_01_2017/extract_0/frames'
