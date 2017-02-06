@@ -1,6 +1,3 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
@@ -22,7 +19,9 @@ filetype indent on
 
 " Configuration for HTML files
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType js setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au BufReadPost *.html set filetype=html
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+au BufReadPost *.javascript set filetype=javascript
 
 " indicator at 120 chars
 set colorcolumn=120
@@ -121,5 +120,4 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=53
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=8
-
 
