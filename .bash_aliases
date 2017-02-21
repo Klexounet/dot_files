@@ -23,4 +23,4 @@ alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
 
-alias mdpklex='keepassx Dropbox/Reminiz\ -\ Team/Pwds/mdp_klex.kdb'
+alias mdpklex='keepassx Dropbox/Reminiz\ -\ Team/Pwds/mdp_klex.kdbx'
