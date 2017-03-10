@@ -4,7 +4,6 @@ set -xe
 # Install pathogen and vim plugins
 
 cd ~
-# Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
@@ -18,3 +17,4 @@ git clone https://github.com/Valloric/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py
 
+cp .vim_bundles.vim ~/.vim_bundles.vim
