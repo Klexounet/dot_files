@@ -57,14 +57,15 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 # Add Git branch in prompt
-source ~/.git-prompt.sh
-if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\e[01;35m\][\t]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[01;33m\]$(__git_ps1 "|%s")\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}[\t]\u@\h:\w\$ '
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    if [ "$color_prompt" = yes ]; then
+        PS1='${debian_chroot:+($debian_chroot)}\[\e[01;35m\][\t]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\e[01;33m\]$(__git_ps1 "|%s")\[\033[00m\]\$ '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}[\t]\u@\h:\w\$ '
+    fi
+    unset color_prompt force_color_prompt
 fi
-unset color_prompt force_color_prompt
-
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
