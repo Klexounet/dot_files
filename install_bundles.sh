@@ -15,6 +15,7 @@ git clone https://github.com/vim-airline/vim-airline-themes.git
 git clone https://github.com/nathanaelkane/vim-indent-guides.git
 git clone https://github.com/Valloric/YouCompleteMe.git
 cd ~/.vim/bundle/YouCompleteMe
+git submodule update --init --recursive
 ./install.py
 
 cp .vim_bundles.vim ~/.vim_bundles.vim
