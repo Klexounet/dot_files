@@ -39,7 +39,9 @@ set comments=sl:/*,mb:\ *,elx:\ */
 set hlsearch
 " Start searching on the first key stroke
 set incsearch
-"
+" Smart menu
+set wildmenu
+
 " colorscheme
 colorscheme molokai
 let g:molokai_original = 1
