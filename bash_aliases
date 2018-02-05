@@ -4,6 +4,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
 fi
+# neovim
+alias vim='nvim'
 # ls aliases
 alias ll='ls -ahlF'
 alias la='ls -A'
@@ -17,8 +19,14 @@ alias ga='git add'
 alias gc='git commit'
 alias gd='git diff'
 alias gs='git status'
-# Keepass alias
-alias mdpklex='keepassx Dropbox/Reminiz\ -\ Team/Pwds/mdp_klex.kdbx'
+# Docker aliases
+alias dps='docker ps'
+alias docker_stop_containers='docker stop $(docker ps -a -q)'
+alias docker_rm_containers='docker rm $(docker ps -a -q)'
+alias docker_stop_rm_containers='docker_stop_containers; docker_rm_containers'
+alias docker_purge_images='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
+alias nvidia-smi-docker='nvidia-docker run --rm nvidia/cuda nvidia-smi'
+
 
 # Copy autocompletion from other function
 get_completions(){
@@ -56,10 +64,18 @@ get_completions(){
 docker-new-bash(){
     docker exec -t -i $1 /bin/bash
 }
+docker-new-bash-root(){
+    docker exec -u 0 -t -i $1 /bin/bash
+}
 _docker-new-bash(){
     local cur=${COMP_WORDS[COMP_CWORD]}
     local comp=$(get_completions 'docker attach ')
     COMPREPLY=( $(compgen -W "$comp" -- $cur) )
 }
 complete -F _docker-new-bash docker-new-bash
+complete -F _docker-new-bash docker-new-bash-root
+
+function d-c-r() {
+    docker-compose run --rm $1 /bin/bash -c "$2"
+}
 
