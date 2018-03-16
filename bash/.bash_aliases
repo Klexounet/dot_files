@@ -79,3 +79,15 @@ function d-c-r() {
     docker-compose run --rm $1 /bin/bash -c "$2"
 }
 
+function jq_change_key {
+    jq "to_entries |
+        map(if .key == \"$1\"
+            then . + {\"value\":\"$2\"}
+            else .
+            end) |
+        from_entries"
+}
+
+function jq_add_key {
+  jq --arg key "$2" ". + {\"$1\": \$key}"
+}
