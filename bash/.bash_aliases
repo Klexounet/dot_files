@@ -11,6 +11,8 @@ alias ll='ls -ahlF'
 alias la='ls -A'
 alias tmux='tmux -2'
 alias cat='bat'
+alias ping='prettyping --nolegend'
+
 
 # Git aliases
 alias ga='git add'
