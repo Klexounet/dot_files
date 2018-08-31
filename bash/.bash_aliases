@@ -1,3 +1,5 @@
+alias rmz_dns='sudo cp /home/klex/repos/resolv.conf /etc/resolv.conf'
+
 # Enable color of ls and grep if available
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
