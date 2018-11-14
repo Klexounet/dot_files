@@ -21,6 +21,7 @@ let $FZF_DEFAULT_COMMAND = "rg --files --no-ignore --hidden -g '!.git/**' -g '!*
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ambv/black'
 Plug 'ap/vim-css-color'
 Plug 'bling/vim-airline',
 Plug 'honza/vim-snippets',
