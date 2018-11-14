@@ -10,7 +10,6 @@ alias vim='nvim'
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias tmux='tmux -2'
-alias cat='bat'
 alias ping='prettyping --nolegend'
 
 
