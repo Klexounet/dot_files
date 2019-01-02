@@ -2,6 +2,7 @@
 
 
 SRC_DIR=~/repos
+ARCHITECTURE := $(shell dpkg --print-architecture)
 
 installs:
 	sudo apt update && sudo apt install -y \
@@ -13,9 +14,9 @@ installs:
 		ffmpeg
 
 bat:
-	wget https://github.com/sharkdp/bat/releases/download/v0.9.0/bat_0.9.0_amd64.deb
-	sudo dpkg -i bat_0.9.0_amd64.deb
-	rm bat_0.9.0_amd64.deb
+	wget https://github.com/sharkdp/bat/releases/download/v0.9.0/bat_0.9.0_$(ARCHITECTURE).deb
+	sudo dpkg -i bat_0.9.0_$(ARCHITECTURE).deb
+	rm bat_0.9.0_$(ARCHITECTURE).deb
 
 prettyping:
 	curl -O https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
