@@ -6,7 +6,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
 fi
-alias vim='nvim'
 alias ll='ls -ahlF'
 alias la='ls -A'
 alias tmux='tmux -2'

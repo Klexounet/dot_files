@@ -6,7 +6,7 @@
 set -euxo pipefail
 
 sudo apt install -y \
-    curl jq htop ncdu stow vim wget
+    curl jq htop ncdu stow tmux vim wget
 
 # bat
 wget https://github.com/sharkdp/bat/releases/download/v0.6.0/bat_0.6.0_i386.deb -O /tmp/bat.deb
