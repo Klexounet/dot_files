@@ -1,7 +1,4 @@
-.PHONY: installs bat prettyping git-diff-so-fancy fzf vscode system
-
-URL_FONT=https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/InconsolataGo/Regular/complete/InconsolataGo%20Nerd%20Font%20Complete%20Mono.ttf
-DST_FONT=/usr/local/share/fonts/InconsolataGo-Nerd-Font-Complete-Mono.ttf
+.PHONY: installs ubuntu-tools font docker-install bat prettyping git-diff-so-fancy fzf vscode grub-customizer system
 
 SRC_DIR=~/repos
 ARCHITECTURE := $(shell dpkg --print-architecture)
@@ -12,13 +9,15 @@ installs:
 		git vim tmux \
 		jq htop ncdu stow \
 		keepassx \
-		openvpn openvpn-server \
+		openvpn openssh-server \
 		ffmpeg vlc
 
-font: $(DST_FONT)
-$(DST_FONT):
-	sudo curl $(URL_FONT) -o $(DST_FONT)
-	fc-cache -f -v
+ubuntu-tools:
+	sudo apt update && sudo apt install -y \
+		gnome-tweaks
+
+font:
+	sudo apt update && sudo apt install -y fonts-firacode
 
 docker-install:
 	sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
